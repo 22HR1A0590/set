@@ -9,8 +9,7 @@ Sample Input:
 5
 2
 Sample Output:
-1 2 3 4 5 
-Note: There is trailing space at the end of output'''
+1 2 3 4 5 '''
 
 Ans:
 n = int(input())
@@ -25,8 +24,7 @@ print(" ".join(map(str, sorted_values)) + " ")
 Sample Input:
 3 1 5 4 2
 Sample Output:
-1 2 3 4 5
-Note: There is no trailing space at the end of output.'''
+1 2 3 4 5'''
 
 Ans:
 input_values = input()
@@ -39,8 +37,7 @@ Sample Input:
 1 2 3 4
 2 4 6 8
 Sample Output:
-1 3
-Note: There are trailing spaces at the end of output.'''
+1 3'''
 
 Ans:
 set1_input = input()
@@ -56,8 +53,7 @@ Sample Input:
 1 2 3 4
 2
 Sample Output:
-1 3 4 
-Note: There is a trailing space at the end of the list.'''
+1 3 4 '''
 
 Ans:
 set_input = input()
@@ -87,8 +83,7 @@ common_values = set1.intersection(set2)
 sorted_common_values = sorted(common_values)
 print(" ".join(map(str, sorted_common_values)) + " ")
 
-'''6)
-Write a program to get the set values in a single line separated by space (including duplicate values) and print the number of elements in the given set.
+'''6)Write a program to get the set values in a single line separated by space (including duplicate values) and print the number of elements in the given set.
 Sample Input:
 1 2 3 4 5 1 2 3
 Sample Output:
@@ -145,6 +140,15 @@ Duplicate Values: 3
 1 2 3 '''
 
 Ans:
+input_values = []
+n = int(input())
+for _ in range(n):
+    value = int(input())
+    input_values.append(value)
+unique_values = set(input_values)
+duplicate_count = len(input_values) - len(unique_values)
+print(f"Duplicate Values: {duplicate_count}")
+print(" ".join(map(str, unique_values)) + " ")
 
 
 
